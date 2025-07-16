@@ -1,48 +1,79 @@
-# 🛒 Market Basket Analysis – Association Rule Mining (Apriori)
+# 🛒 Market Basket Analysis using Apriori Algorithm & Tableau
 
-This project uncovers product association rules from retail transactions using the Apriori algorithm and visualizes insights via Tableau Public dashboard.
+This project performs Market Basket Analysis on simulated retail transactions using the Apriori algorithm to discover hidden product purchase patterns. The results are visualized through an interactive Tableau Public dashboard.
+
+---
+
+## 🔍 Objective
+
+- Discover associations between frequently bought products
+- Generate strong rules using support, confidence, and lift
+- Visualize top rules, matrix views, and rule strength comparisons
 
 ---
 
 ## 📁 Project Structure
 
-- `data/` – Raw retail dataset (`products.csv`)
-- `src/` – Python scripts for:
-  - Previewing data
-  - Preprocessing into transaction format
-  - Extracting association rules
-- `output/` – Generated rule file (`association_rules.xlsx`)
-- `dashboard/` – Link to Tableau dashboard
-- `notebooks/` – (Optional) Jupyter notebook version
-- `README.md` – Project overview
-- `requirements.txt` – Dependencies
+market-basket-analysis/
+│
+├── data/
+│ └── products.csv # Raw transactional data
+│
+├── src/
+│ ├── preview.py # Initial CSV preview
+│ ├── preprocess.py # One-hot encoding with TransactionEncoder
+│ └── rules.py # Apriori algorithm and rule generation
+│
+├── output/
+│ └── association_rules.xlsx # Final association rules file
+│
+├── dashboard/
+│ └── tableau_dashboard_link.txt # Tableau Public link
+│
+├── requirements.txt # Python dependencies
+└── README.md # Project overview (this file)
+
 
 ---
 
-## 🔍 Techniques Used
+## ⚙️ How It Works
 
-- **Apriori Algorithm** (`mlxtend`)
-- **Association Rules** (Support, Confidence, Lift)
-- **One-Hot Encoding**
-- **Tableau Dashboard** for:
-  - Top Rules by Confidence
-  - Lift vs Confidence
-  - Rule Matrix
-  - Top Antecedents
+1. **Data Input**: Simulated transaction log with product names
+2. **Preprocessing**: Tokenize product lists, one-hot encode using `mlxtend`
+3. **Apriori Rule Mining**: Discover rules with minimum support & confidence
+4. **Export**: Save rules to Excel for external BI visualization
+5. **Tableau Dashboard**: Visualize strongest rules, lift vs confidence, top products, and matrix patterns
 
 ---
 
-## 📊 Live Tableau Dashboard
+## 📊 Tableau Dashboard
+
+🧠 View the full interactive dashboard with 6 analytical sheets:
+- Top Rules by Confidence
+- Top Rules by Lift
+- Lift vs Confidence (Scatter)
+- Rule Matrix (Lift Heatmap)
+- Top Antecedents
+- All Rules Table
 
 🔗 https://public.tableau.com/views/MarketBasketInsightsAssociationRuleMining/MarketBasketDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ---
 
-## 🚀 How to Run
+## 📦 Requirements
+
+Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
 
-python src/preview.py
-python src/preprocess.py
-python src/rules.py
+**## Main Python Libraries:**
+mlxtend
+pandas
+openpyxl
+
+**📌 Author**
+**Name:** Juturu Vamsi Charan
+**LinkedIn:** https://www.linkedin.com/in/juturu-vamsi-charan-9234b3256/
+**GitHub:** https://github.com/VAMSI-1CHARAN
+
