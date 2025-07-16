@@ -72,7 +72,7 @@ mlxtend
 pandas
 openpyxl
 
-**📌 Author**
+**## 📌 Author**
 **Name:** Juturu Vamsi Charan
 **LinkedIn:** https://www.linkedin.com/in/juturu-vamsi-charan-9234b3256/
 **GitHub:** https://github.com/VAMSI-1CHARAN
